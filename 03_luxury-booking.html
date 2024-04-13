@@ -5,8 +5,8 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="icon" href="03_images/icon.png" type="image/gif" sizes="16x16">
-    <title>Baresto - Cafe, Bar & Restaurant Website Template</title>
+    <link rel="icon" href="03_images/icon.ico"" type="image/gif" sizes="16x16">
+    <title>Check & Mate - Cafe & Dine</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="keywords" content="">
@@ -37,7 +37,7 @@
                     <div class="col-md-12">
                         <!-- logo begin -->
                         <div id="logo">
-                            <a href="03_luxury-index.html">
+                            <a href="index.html">
                                 <img class="logo logo_dark_bg" src="03_images/logo.png" alt="">
                                 <img class="logo logo_light_bg" src="03_images/logo.png" alt="">
                             </a>
@@ -51,7 +51,7 @@
                         <!-- mainmenu begin -->
                         <nav>
                             <ul id="mainmenu">
-                                <li><a href="03_luxury-index.html">Home</a></li>
+                                <li><a href="index.html">Home</a></li>
                                 <li><a href="03_luxury-menu.html">menu</a></li>
                                 <li><a href="03_luxury-booking.html">Booking</a></li>
                                 <li><a href="03_luxury-about.html">About</a>
@@ -82,10 +82,6 @@
                         <div class="text-center wow fadeInUp">
                             <h5 class="uptitle">Make a</h5>
                             <h2>Reservation</h2>
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="03_luxury-index.html">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Booking</li>
-                            </ol>
                         </div>
                     </div>
                 </div>
@@ -105,11 +101,11 @@
                                 you embark on a culinary journey like no other. </p>
                         </div>
                         <div class="col-lg-8">
-                            <form class="row" name="contactForm" id='contact_form' method="post" action="#">
+                            <form class="row" name="contact-form" id='contact_form' method="post" action="https://script.google.com/macros/s/AKfycbz2lx9oXRrhYe-CedPd4Ev7TBc6BemXu2lzuYDb8eXaTeicbJBHCuGjrkHTSWLY8Suk/exec">
                                 <div class="col-lg-4 mb10">
                                     <h4>Select Date</h4>
-                                    <div id="date" class="input-group date" data-date-format="mm-dd-yyyy">
-                                        <input class="form-control" type="text" readonly />
+                                    <div id="date" name="bookingdate" class="input-group date" data-date-format="mm-dd-yyyy">
+                                        <input name="bookingdate" class="form-control" type="text" readonly />
                                         <span class="input-group-addon"><i
                                                 class="glyphicon glyphicon-calendar"></i></span>
                                     </div>
@@ -119,29 +115,29 @@
                                     <h4>Select Time</h4>
                                     <select name="time" id="time" value="" class="form-control">
                                         <option selected disabled>Select time</option>
-                                        <option value="10:00">10:00</option>
-                                        <option value="11:00">11:00</option>
-                                        <option value="12:00">12:00</option>
-                                        <option value="13:00">13:00</option>
-                                        <option value="14:00">14:00</option>
-                                        <option value="15:00">15:00</option>
-                                        <option value="16:00">16:00</option>
-                                        <option value="17:00">17:00</option>
-                                        <option value="18:00">18:00</option>
-                                        <option value="19:00">19:00</option>
-                                        <option value="20:00">20:00</option>
-                                        <option value="21:00">21:00</option>
-                                        <option value="22:00">22:00</option>
+                                        <option name="time" value="10:00">10:00</option>
+                                        <option name="time" value="11:00">11:00</option>
+                                        <option name="time" value="12:00">12:00</option>
+                                        <option name="time" value="13:00">13:00</option>
+                                        <option name="time" value="14:00">14:00</option>
+                                        <option name="time" value="15:00">15:00</option>
+                                        <option name="time" value="16:00">16:00</option>
+                                        <option name="time" value="17:00">17:00</option>
+                                        <option name="time" value="18:00">18:00</option>
+                                        <option name="time" value="19:00">19:00</option>
+                                        <option name="time" value="20:00">20:00</option>
+                                        <option name="time" value="21:00">21:00</option>
+                                        <option name="time" value="22:00">22:00</option>
                                     </select>
                                 </div>
 
                                 <div class="col-lg-4 mb10">
                                     <h4>How Many Guests?</h4>
                                     <select name="guests" id="guests" value="" class="form-control">
-                                        <option value="1-4">1 - 4</option>
-                                        <option value="5-8">5 - 10</option>
-                                        <option value="5-8">11 - 20</option>
-                                        <option value="20+">More than 20</option>
+                                        <option name="guests" value="1-4">1 - 4</option>
+                                        <option name="guests" value="5-8">5 - 10</option>
+                                        <option name="guests" value="5-8">11 - 20</option>
+                                        <option name="guests" value="20+">More than 20</option>
                                     </select>
                                 </div>
 
@@ -182,6 +178,7 @@
                                         <input type='submit' id='send_message' value='Submit Form' class="btn-line">
                                     </div>
                                 </div>
+                                <script src="Google-Sheet.js"></script>
 
                             </form>
 
@@ -207,9 +204,10 @@
                 <div class="row g-4 align-items-center">
                     <div class="col-lg-4 sm-text-center">
                         <h3>Our Location</h3>
-                        Collins Street West, Victoria 8007 Australia<br>
-                        T. (208) 333 9296<br>
-                        E. contact@baresto.com<br>
+                        Plot no-114,block-FC,sector-3,saltlake city, Kolkata, India,700091<br>
+                        Mobile: <a href="tel:+919748305061">9748305061</a><br>
+                        <a href="https://wa.me/917980795046">Whatsapp: 7980795046</a><br>
+                        Email:<a href="mailto:paultrisha493@gmail.com">paultrisha493@gmail.com</a>  <br>
                     </div>
                     <div class="col-lg-4 text-center">
                         <img class="logo" src="03_images/logo.png" alt="">
