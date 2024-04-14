@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="icon" href="03_images/icon.ico"" type="image/gif" sizes="16x16">
+    <link rel="icon" href="03_images/icon.ico"" type=" image/gif" sizes="16x16">
     <title>Check & Mate - Cafe & Dine</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -25,10 +25,19 @@
     <!-- custom css -->
     <link rel="stylesheet" href="css/03_custom.css" type="text/css">
 
+    <script>
+        var currentTime = new Date();
+        // format the current time as a string
+        var formattedTime = currentTime.getHours() + ":" + currentTime.getMinutes() + ":" + currentTime.getSeconds();
+        // update the value of the hidden field
+        document.getElementById("current-time").value = formattedTime;
+    </script>
+
 </head>
 
-<body class="page-booking">
+<body class="page-booking" onsubmit="updateCurrentTime()">
 
+    </script>
     <div id="wrapper">
         <!-- header begin -->
         <header class="header_center">
@@ -101,10 +110,26 @@
                                 you embark on a culinary journey like no other. </p>
                         </div>
                         <div class="col-lg-8">
-                            <form class="row" name="contact-form" id='contact_form' method="post" action="https://script.google.com/macros/s/AKfycbz2lx9oXRrhYe-CedPd4Ev7TBc6BemXu2lzuYDb8eXaTeicbJBHCuGjrkHTSWLY8Suk/exec">
+                            <form class="row" name="contact-form" id='contact_form' method="post"
+                                action="https://script.google.com/macros/s/AKfycbwFGW7tXOHNvymQU3Hp341NoM2Hw5cM3gYunx4GPORjXNBhEMHwcbXN-szuQwqZxVHv/exec">
+                                <input type="hidden" id="current-time" name="current-time" value="">
+                                <script>
+                                    function updateCurrentTime() {
+
+                                        var currentTime = new Date().toLocaleTimeString();
+                                        var currentDate = new Date().toLocaleDateString(); // Add this line
+                                        var formattedDateTime = currentTime + " " + currentDate; // Combine time and date
+                                        document.getElementById("current-time").value = formattedDateTime;
+                                    }
+                                    updateCurrentTime() 
+                                </script>
+
+
+
                                 <div class="col-lg-4 mb10">
                                     <h4>Select Date</h4>
-                                    <div id="date" name="bookingdate" class="input-group date" data-date-format="mm-dd-yyyy">
+                                    <div id="date" name="bookingdate" class="input-group date"
+                                        data-date-format="mm-dd-yyyy">
                                         <input name="bookingdate" class="form-control" type="text" readonly />
                                         <span class="input-group-addon"><i
                                                 class="glyphicon glyphicon-calendar"></i></span>
@@ -207,7 +232,7 @@
                         Plot no-114,block-FC,sector-3,saltlake city, Kolkata, India,700091<br>
                         Mobile: <a href="tel:+919748305061">9748305061</a><br>
                         <a href="https://wa.me/917980795046">Whatsapp: 7980795046</a><br>
-                        Email:<a href="mailto:paultrisha493@gmail.com">paultrisha493@gmail.com</a>  <br>
+                        Email:<a href="mailto:paultrisha493@gmail.com">paultrisha493@gmail.com</a> <br>
                     </div>
                     <div class="col-lg-4 text-center">
                         <img class="logo" src="03_images/logo.png" alt="">
